@@ -36,7 +36,7 @@
                 <?php include("html/aside.php");?>
                 <main class="col">
                     <h1>Category</h1>
-                    <a href="#"class="btn btn-outline-primary">Create a category</a>
+                    <a href="/create_category.php"class="btn btn-outline-primary">Create a category</a>
                     <table class="table mt-2">
                         <thead>
                             <tr>
@@ -53,8 +53,8 @@
                                 <td><?php echo $item["name"]; ?></td>
                                 <td><?php echo $item["slug"]; ?></td>
                                 <td>
-                                    <a href="#"class="btn btn-outline-info">Edit</a>
-                                    <a href="#"class="btn btn-outline-danger">Delete</a>
+                                    <a href="/edit_category.php?id=<?php echo $item["id"]; ?>" class="btn btn-outline-info">Edit</a>
+                                    <a onclick="return confirm('Chắc chắn xoá?')" href="/delete_category.php?id=<?php echo $item["id"]; ?>" class="btn btn-outline-danger">Delete</a>
                                 </td>
                             </tr>
                             <?php endforeach;?>
