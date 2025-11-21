@@ -13,7 +13,7 @@
                 <?php include("html/aside.php");?>
                 <main class="col">
                     <h1>Create a new category</h1>
-                    <form action="/save_category.php" method="post">
+                    <form action="/save_category.php" method="post" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label class="form-label">Category name</label>
                             <input type="text" name="name" class="form-control" placeholder="Category name..">
@@ -21,6 +21,10 @@
                         <div class="mb-3">
                             <label class="form-label">Slug</label>
                             <input type="text" name="slug" class="form-control" placeholder="Category slug..">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Icon</label>
+                            <input type="file" accept="image/*" name="icon" class="form-control" placeholder="Category icon..">
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
