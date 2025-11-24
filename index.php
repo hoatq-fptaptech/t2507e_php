@@ -1,4 +1,9 @@
 <?php 
+session_start();
+if(isset($_SESSION["user"])){
+    $user = $_SESSION["user"];
+    echo "<h1>Xin chào: ".$user["name"]."</h1>";
+}
 // code php here
 // variable - datatype
 $x;
