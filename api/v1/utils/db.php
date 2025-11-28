@@ -24,3 +24,11 @@ function query($sql){ // SELECT * FROM ...
     }
     return $data;
 }
+
+function queryUpdate($sql){
+    $conn = connect();
+    if($conn->query($sql) === TRUE){
+        return $conn->insert_id;
+    }
+    return 0;
+}
